@@ -1,0 +1,585 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("img/fundo-de-papel-de-parede-de-barbeiro-com-ferramentas-conceito-de-trabalho-e-carreira.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: #f0f0f0;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgb(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: background 0.4s ease;
+}
+
+header {
+  background-color: #000000;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column; /* empilha o título e o menu */
+  align-items: center;    /* centraliza horizontalmente */
+  text-align: center;
+  gap: 1rem;
+  animation: slideDown 1s ease;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.8rem;
+  color: #f0f0f0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e91e1e;
+}
+
+section {
+  padding: 2rem;
+  animation: fadeIn 1s ease;
+}
+
+#home {
+  background: url('img/barbearia.jpg') center/cover no-repeat;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: zoomIn 1s ease;
+}
+
+#home button {
+  background-color: #e91e1e;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#home button:hover {
+  background-color: #c21818;
+  transform: scale(1.05);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea,
+select {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #1f1f1f;
+  color: #f0f0f0;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #c21818;
+  border: none;
+  padding: 0.75rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.imagem-centralizada {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.imagem-redonda {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 1rem;
+  border-radius: 50%;
+  border: 2px solid #ffffffc7;
+  transition: transform 0.4s ease;
+  justify-content: center;
+}
+
+.imagem-redonda:hover {
+  transform: scale(1.03);
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- Modo Claro --- */
+body.light-mode {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+body.light-mode .servico-item {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+}
+
+body.light-mode .servico-item:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .servico-item i {
+  color: #c21818;
+}
+
+body.light-mode .servico-item h3 {
+  color: #c21818;
+}
+
+body.light-mode .servico-item p {
+  color: #333;
+}
+
+body.light-mode .preco {
+  color: #111;
+}
+
+
+body.light-mode h2 {
+  font-size: 2.4rem;         /* aumenta o tamanho do título */
+  color: #000000;            /* preto claro vibrante */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+body.light-mode ul,
+body.light-mode li {
+  font-size: 1.25rem;        /* aumenta um pouco o texto das listas */
+  color: #000000;            /* tom preto mais escuro para legibilidade */
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+body.light-mode::before {
+  background: rgba(255, 255, 255, 0.3); /* uma camada branca translúcida para clarear a imagem */
+}
+
+body.light-mode header,
+body.light-mode footer {
+  background-color: #333ed8;
+  color: #080303;
+}
+
+body.light-mode nav a {
+  color: #000000;
+}
+
+body.light-mode #home {
+  color: #fff;
+  text-shadow: none;
+}
+
+body.light-mode button,
+body.light-mode button[type="submit"] {
+  background-color: #c21818;
+  color: white;
+}
+
+body.light-mode input,
+body.light-mode textarea,
+body.light-mode select {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #ccc;
+}
+body.light-mode section:not(#home):not(#localizacao) {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+
+body.light-mode #toggle-theme {
+  color: #222;
+}
+
+body.light-mode p {
+  font-size: 1.2rem;              /* aumenta o tamanho do texto */
+  color: #000000;                 /* preto vibrante */
+  font-weight: 600;               /* um pouco mais negrito */
+  line-height: 1.6;               /* melhora a leitura */
+}
+
+body.light-mode label {
+  font-size: 1.2rem;              /* aumenta o tamanho do texto */
+  color: #000000;                 /* preto vibrante */
+  font-weight: 600;               /* um pouco mais negrito */
+  line-height: 1.6;               /* melhora a leitura */
+}
+
+/* --- Modo Escuro (Padrão) --- */
+
+h2 {
+  font-size: 2.4rem;
+  color: #f0f0f0;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+ul,
+li {
+  font-size: 1.25rem;
+  color: #f0f0f0;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+label {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+#localizacao {
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* escuro no modo padrão */
+  border-radius: 8px;
+}
+
+body.light-mode #localizacao {
+  background-color: rgba(255, 255, 255, 0.6); /* claro no modo claro */
+}
+body.light-mode .horario-item {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #ccc;
+}
+
+body.light-mode .horario-item:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .horario-item i {
+  color: #c21818;
+}
+
+body.light-mode .horario-item h3,
+body.light-mode .horario-item p {
+  color: #000;
+}
+body.light-mode .status-barbearia {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+body.light-mode .status-aberto {
+  background-color: #28a745;
+  color: #fff;
+}
+
+body.light-mode .status-fechado {
+  background-color: #c21818;
+  color: #fff;
+}
+
+
+ .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.galeria img {
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.servico-item {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #444;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.servico-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.servico-item h3 {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  color: #e91e1e;
+}
+
+.servico-item p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+}
+
+.preco {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+.horario-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.horario-item {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #444;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.horario-item:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.horario-item i {
+  font-size: 2rem;
+  color: #e91e1e;
+  margin-bottom: 0.5rem;
+}
+
+.horario-item h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: #f0f0f0;
+}
+
+.horario-item p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.status-barbearia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.status-aberto {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.status-fechado {
+  background-color: #c21818;
+  color: #fff;
+}
+
+ /* Estilo para destacar o Instagram */
+    #instagram {
+      text-align: center;
+      margin: 3rem 0 2rem 0;
+    }
+    #instagram h2 {
+      font-size: 2.4rem;
+      color: #E1306C; /* cor instagram */
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px #000000cc;
+    }
+    .instagram-box {
+      margin-top: 1rem;
+    }
+    .botao-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #E1306C;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 12px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(225,48,108,0.6);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .botao-instagram i {
+      font-size: 1.8rem;
+    }
+    .botao-instagram:hover {
+      background-color: #c72c5b;
+      transform: scale(1.08);
+      box-shadow: 0 6px 16px rgba(199,44,91,0.8);
+    }
+    /* Rodapé instagram destacado */
+    footer a.instagram-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #E1306C !important;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+    footer a.instagram-footer:hover {
+      color: #c72c5b !important;
+      text-decoration: underline;
+    }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #home {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+  section {
+    padding: 1.5rem 1rem;
+  }
+
+  input,
+  textarea,
+  select,
+  button {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  label,
+  p,
+  li {
+    font-size: 1.1rem;
+  }
+}

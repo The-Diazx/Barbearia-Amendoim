@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barber Shop Amendoim</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Barber Shop Amendoim</h1>
+      <ul>
+        <button id="toggle-theme" aria-label="Alternar modo claro/escuro" title="Alternar modo claro/escuro" style="background:none; border:none; color:#f0f0f0; cursor:pointer; font-size:1.5rem;">
+          <i class="fas fa-moon"></i>
+        </button>
+        <li><a href="#home">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Bem-vindo à Barber Shop Amendoim</h2>
+    <p>O seu estilo começa aqui. Corte, barba e cuidado de verdade.</p>
+    <button onclick="agendarServico()">Agendar Serviço </button>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Somos uma barbearia tradicional com um toque moderno. Atendimento de qualidade e ambiente acolhedor.</p>
+    <div class="imagem-centralizada">
+      <img src="img/Dono da Barbearia.jpg" width="300" height="300" alt="Equipe da barbearia" class="imagem-redonda">
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Nossos Serviços</h2>
+    <div class="servicos-grid">
+      <div class="servico-item">
+        <i class="fas fa-beard"></i>
+        <h3>Barba</h3>
+        <p>Modelagem e alinhamento com toalha quente</p>
+        <span class="preco">R$ 20,00</span>
+      </div>
+      <div class="servico-item">
+        <i class="fas fa-cut"></i>
+        <h3>Combo Corte + Barba</h3>
+        <p>Pacote completo com corte de cabelo e barba</p>
+        <span class="preco">R$ 45,00</span>
+      </div>
+      <div class="servico-item">
+        <i class="fas fa-eye"></i>
+        <h3>Sobrancelha</h3>
+        <p>Design simples com navalha</p>
+        <span class="preco">R$ 10,00</span>
+      </div>
+      <div class="servico-item">
+        <i class="fas fa-user-alt"></i>
+        <h3>Degradê + Navalha</h3>
+        <p>Estilo moderno com finalização precisa</p>
+        <span class="preco">R$ 35,00</span>
+      </div>
+      <div class="servico-item">
+        <i class="fas fa-tint"></i>
+        <h3>Hidratação de Barba</h3>
+        <p>Tratamento nutritivo para fios saudáveis</p>
+        <span class="preco">R$ 25,00</span>
+      </div>
+      <div class="servico-item">
+        <i class="fas fa-bolt"></i>
+        <h3>Platinado</h3>
+        <p>Descoloração e tonalização com estilo</p>
+        <span class="preco">R$ 60,00</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Nossos Trabalhos</h2>
+    <div class="galeria">
+      <img src="img/Corte degradê com navalha.png" width="200" height="200" alt="Corte degradê com navalha">
+      <img src="img/1000316484.jpg" width="200" height="200" alt="Barba completa com hidratação">
+      <img src="img/Estrela cadente.jpg" width="200" height="200" alt="Estrela Cadente">
+      <img src="img/Nevou.jpg" width="200" height="200" alt="Nevou">
+      <img src="img/Risco.jpg" width="200" height="200" alt="Risco">
+      <img src="img/The Flash.jpg" width="200" height="200" alt="The Flash">
+      <img src="img/Monster.jpg" width="200" height="200" alt="Monster">
+      <img src="img/Risco Sobrancelha.jpg" width="200" height="200" alt="Risco sobrancelha">
+      <img src="img/Barba Perfeita.jpg" width="200" height="200" alt="Barba Perfeita">
+      <img src="img/Barba desenhada.png" width="200" height="200" alt="Barba Desenhada">
+      <img src="img/Risco 2 Sobrancelha.jpg" width="200" height="200" alt="Risco 2 Sobrancelha">
+      <img src="img/Risco Cabelo.jpg" width="200" height="200" alt="Risco Cabelo">
+    </div>
+  </section>
+
+  <section id="horarios">
+    <h2>Horário de Funcionamento</h2>
+    <div class="status-barbearia" id="statusBarbearia">
+      <i class="fas fa-clock"></i>
+      <span id="statusTexto">Verificando status...</span>
+    </div>
+    <div class="horario-container">
+      <div class="horario-item">
+        <i class="fas fa-calendar-week"></i>
+        <h3>Terça a Sábado</h3>
+        <p>09:00 às 19:30</p>
+      </div>
+      <div class="horario-item">
+        <i class="fas fa-sun"></i>
+        <h3>Domingo</h3>
+        <p>09:00 às 13:00</p>
+      </div>
+      <div class="horario-item">
+        <i class="fas fa-times-circle"></i>
+        <h3>Segunda-feira</h3>
+        <p>Fechado</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nova seção Instagram destacada -->
+  <section id="instagram">
+    <h2>Siga-nos no Instagram</h2>
+    <div class="instagram-box">
+      <a href="https://www.instagram.com/amendoimbarber" target="_blank" class="botao-instagram" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> @amendoimbarber
+      </a>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="formulario">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="servico">Serviço desejado:</label>
+      <select id="servico" name="servico" required>
+        <option value="">Selecione</option>
+        <option value="barba">Barba</option>
+        <option value="combo">Combo Corte + Barba</option>
+        <option value="degrade">Degradê + Navalha</option>
+        <option value="hidratacao">Hidratação de Barba</option>
+        <option value="platinado">Platinado</option>
+        <option value="sobrancelha">Sobrancelha</option>
+      </select>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" maxlength="200" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="localizacao">
+    <h2>Localização</h2>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.0541194390557!2d-38.3996861!3d-12.904241599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71617b416a38427%3A0x49584d2123724310!2sAmendoim%20BarberShop!5e0!3m2!1spt-BR!2sbr!4v1751905256681!5m2!1spt-BR!2sbr" 
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Barber Shop Amendoim. Todos os direitos reservados.</p>
+    <p>
+      <a href="https://www.instagram.com/amendoimbarber" target="_blank" rel="noopener noreferrer" class="instagram-footer">
+        <i class="fab fa-instagram"></i> @amendoimbarber
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
