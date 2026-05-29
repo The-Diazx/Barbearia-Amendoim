@@ -2,7 +2,7 @@
 
 > Um site institucional e de agendamento moderno para a Barbearia Amendoim, desenvolvido para focar na experiência do usuário e na facilidade de acesso aos serviços.
 
----
+--- https://the-diazx.github.io/Barbearia-Amendoim/
 
 ## 💻 Sobre o Projeto
 
